@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function RegistrationScreen() {
   const [name, setName] = useState("");
@@ -7,7 +8,7 @@ function RegistrationScreen() {
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
 
-  const register = () => {
+  const register = async () => {
     const user = {
       name,
       email,
@@ -15,7 +16,12 @@ function RegistrationScreen() {
       cpassword,
     };
     if (password === cpassword) {
-      console.log(user);
+      try {
+        const result = (await axios.post("/api/users/register", user)).data;
+        console.log(result, "res");
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       alert("password and confirm password do not match");
     }
@@ -68,12 +74,14 @@ function RegistrationScreen() {
             }}
           />
 
-         
-          <div className="text-start">
-          <button className='btn btn-secondary mt-2' onClick={register}>
-            Register
-          </button>
-            <p className="text-light mt-3">Already registered? <Link to = '/login'>Click here</Link> to <b>Login</b></p>
+          <div className='text-start'>
+            <button className='btn btn-secondary mt-2' onClick={register}>
+              Register
+            </button>
+            <p className='text-light mt-3'>
+              Already registered? <Link to='/login'>Click here</Link> to{" "}
+              <b>Login</b>
+            </p>
           </div>
         </div>
       </div>
