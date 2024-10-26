@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000 !important;
+}
+#navbar {
+  position: sticky !important;
+  top: 0 !important;
+  overflow: hidden !important;
+  background-color: #333 !important;
+}
+.nav-link,
+.navbar-brand {
+  color: #fff !important;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #cac2c2 !important;
+}
+
+
+/* End Navbar */
+
+/* homepage */
+.smallImg {
+  width: 100%;
+  height: 200px !important;
+  border-radius: 5px;
+}
+
+.bs {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+}
+.bs2{
+  box-shadow:  rgb(162, 123, 123) 0px 5px 15px;
+  border-radius: 8px;
+}
+.bigImg {
+  width: 100%;
+  height: 350px !important;
+  border-radius: 5px;
+}
+
+/* loader */
+.sweet-loading{
+  height: 100vh;
+  align-content: space-evenly;
+}
+
+/* login/registration */
+
+.loginScreen{
+  background-image: url('./images/loginbg3.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 90vh;
+  opacity: 1;
+}
+
+.loginRow h2{
+  color: #fff;
+}
+.loginScreen input{
+  outline: none;
+}
