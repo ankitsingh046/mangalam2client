@@ -24,23 +24,24 @@ function Homescreen() {
     }
     fetchRooms();
   }, []);
-  console.log(rooms, 'rooms')
+  console.log(rooms, "rooms");
 
   return (
-    <div div className="container ">
+    <div div className='container '>
       <div class='row justify-content-center my-4'>
         {loading ? (
           <Loader />
         ) : rooms?.length > 0 ? (
+          Array.isArray(rooms) &&
           rooms?.map((room) => {
             return (
-              <div className='col-md-7 mx-4 my-3'  key={room._id}>
+              <div className='col-md-7 mx-4 my-3' key={room._id}>
                 <Room room={room} />
               </div>
             );
           })
-        ) : error &&(
-          <Error />
+        ) : (
+          error && <Error />
         )}
       </div>
     </div>

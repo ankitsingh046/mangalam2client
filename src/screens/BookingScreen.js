@@ -29,16 +29,15 @@ function BookingScreen({ match }) {
   }, []);
   return (
     <div div className='container '>
-      <div class='row justify-content-center'>
         {loading ? (
           <Loader />
         ) : rooms._id  ? (
-          <div className='row justify-content-center bs mt-5 py-4'>
+          <div className='row justify-content-around bs mt-5 py-4'>
           <div className='col-md-5 text-start'>
             <h3>{rooms.name}</h3>
             <img src={rooms.imageurls[0]} alt='' className='bigImg' />
           </div>
-          <div className='col-md-5 text-end'>
+          <div className='col-md-5 text-md-end text-start'>
             <div>
               <h3>Booking Details</h3>
               <hr />
@@ -68,7 +67,6 @@ function BookingScreen({ match }) {
          
         )}
       </div>
-    </div>
   );
 }
 
