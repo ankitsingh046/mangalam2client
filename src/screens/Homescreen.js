@@ -24,6 +24,7 @@ function Homescreen() {
     }
     fetchRooms();
   }, []);
+  console.log(rooms, 'rooms')
 
   return (
     <div div className="container ">
@@ -31,7 +32,7 @@ function Homescreen() {
         {loading ? (
           <Loader />
         ) : rooms?.length > 0 ? (
-          rooms.map((room) => {
+          rooms?.map((room) => {
             return (
               <div className='col-md-7 mx-4 my-3'  key={room._id}>
                 <Room room={room} />

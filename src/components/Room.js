@@ -57,7 +57,7 @@ function Room({ room }) {
         </Modal.Header>
         <Modal.Body>
           <Carousel activeIndex={index} onSelect={handleSelect}>
-            {room.imageurls.map((image) => {
+            {room?.imageurls?.map((image) => {
               return (
                 <Carousel.Item>
                   <img src={image} className="bigImg" alt={image} />
