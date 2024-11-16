@@ -111,7 +111,7 @@ function RegistrationScreen() {
             >
               Register
             </button>
-            <p className='text-light mt-3'>
+            <p className='text-secondary mt-3'>
               Already registered? <Link to='/login'>Click here</Link> to{" "}
               <b>Login</b>
             </p>

@@ -80,7 +80,11 @@ function LoginScreen() {
           </div>
 
           <div className='text-start'>
-            <button className='btn btn-secondary mt-2' onClick={login}>
+            <button
+              className='btn btn-secondary mt-2'
+              onClick={login}
+              disabled={!email && !password}
+            >
               Login
             </button>
             <p className='text-secondary mt-3'>

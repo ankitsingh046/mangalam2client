@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-function Room({ room }) {
+function Room({ room, fromDate, toDate }) {
+  console.log(toDate, "rooms");
+  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -36,10 +38,14 @@ function Room({ room }) {
           </p>
           {/* <p>{room.description}</p> */}
           <div className='text-end'>
-            <Link to={`/book/${room._id}`}>
-              <button className="btn btn-primary me-2"> Book Now</button>
+            <Link
+              to={`/book/${room._id}/${fromDate}/${toDate}`}
+              style={{pointerEvents: (!fromDate && !toDate) ? 'none': ''}}
+               
+            >
+              <button className='btn btn-primary me-2' > Book Now</button>
             </Link>
-            <button className='btn btn-dark ' onClick={handleShow}>
+            <button className='btn btn-dark ' >
               View Details
             </button>
           </div>
@@ -50,9 +56,9 @@ function Room({ room }) {
         onHide={handleClose}
         backdrop='static'
         keyboard={false}
-        size="lg"
+        size='lg'
       >
-        <Modal.Header >
+        <Modal.Header>
           <Modal.Title>{room.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -60,7 +66,7 @@ function Room({ room }) {
             {room?.imageurls?.map((image) => {
               return (
                 <Carousel.Item>
-                  <img src={image} className="bigImg" alt={image} />
+                  <img src={image} className='bigImg' alt={image} />
                 </Carousel.Item>
               );
             })}
