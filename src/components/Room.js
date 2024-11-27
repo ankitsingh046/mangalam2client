@@ -40,12 +40,12 @@ function Room({ room, fromDate, toDate }) {
           <div className='text-end'>
             <Link
               to={`/book/${room._id}/${fromDate}/${toDate}`}
-              style={{pointerEvents: (!fromDate && !toDate) ? 'none': ''}}
+              // style={{pointerEvents: (!fromDate && !toDate) ? 'none': ''}}
                
             >
               <button className='btn btn-primary me-2' > Book Now</button>
             </Link>
-            <button className='btn btn-dark ' >
+            <button className='btn btn-dark ' onClick={handleShow}>
               View Details
             </button>
           </div>

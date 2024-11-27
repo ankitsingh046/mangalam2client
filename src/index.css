@@ -52,7 +52,7 @@ code {
 }
 .bigImg {
   width: 100%;
-  max-height: 440px;
+  max-height: 400px;
   min-height: 350px;
   border-radius: 5px;
 }
@@ -83,8 +83,8 @@ code {
 @media (max-width: 768px){
   .bigImg {
     width: 100%;
-    max-height: 350px;
-    min-height: 350px;
+    max-height: 340px;
+    min-height: 340px;
     border-radius: 5px;
   }
 }

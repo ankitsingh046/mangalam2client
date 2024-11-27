@@ -37,13 +37,16 @@ function Homescreen() {
 
   return (
     <div div className='container '>
-      <div className='row  justify-content-center my-4'>
+      <div className='row justify-content-center my-4'>
+        <div className="col-md-7 bs px-4 py-3">
         <div className='col-md-3'>
           <RangePicker format={"DD-MM-YYYY"} onChange={handleFilterByDate}
            />
         </div>
+
         <div className='col-md-3'></div>
         <div className='col-md-3'></div>
+        </div>
       </div>
       <div class='row justify-content-center my-4'>
         {loading ? (
