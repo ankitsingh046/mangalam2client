@@ -18,7 +18,7 @@ function Homescreen() {
     async function fetchRooms() {
       try {
         setLoading(true);
-        const data = (await axios.get("/api/rooms/getallrooms")).data;
+        const data = (await axios.get("https://mangalam-be.onrender.com/api/rooms/getallrooms")).data;
         setRooms(data);
         setLoading(false);
       } catch (error) {

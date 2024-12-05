@@ -26,7 +26,7 @@ function RegistrationScreen() {
     if (password === cpassword) {
       try {
         setLoading(true);
-        const result = (await axios.post("/api/users/register", user)).data;
+        const result = (await axios.post("https://mangalam-be.onrender.com/api/users/register", user)).data;
         setLoading(false);
         if (result) {
           setSucces(true);

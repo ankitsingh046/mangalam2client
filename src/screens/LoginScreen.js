@@ -22,7 +22,7 @@ function LoginScreen() {
     console.log(user, "user");
     try {
       setLoading(true);
-      const result = (await axios.post("/api/users/login", user)).data;
+      const result = (await axios.post("https://mangalam-be.onrender.com/api/users/login", user)).data;
       console.log(result, "res");
       setLoading(false);
 

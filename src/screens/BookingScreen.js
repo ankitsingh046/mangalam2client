@@ -22,7 +22,7 @@ const totalAmount = totalDays*rooms?.rentperday;
       try {
         setLoading(true);
         const data = (
-          await axios.post("/api/rooms/getRoomById", { roomId: roomId })
+          await axios.post("https://mangalam-be.onrender.com/api/rooms/getRoomById", { roomId: roomId })
         ).data;
         setRooms(data);
         setLoading(false);
