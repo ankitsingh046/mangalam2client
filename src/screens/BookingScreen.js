@@ -60,7 +60,7 @@ const totalAmount = totalDays*rooms?.rentperday;
               <hr />
                 <p>Total days: <strong>{totalDays}</strong></p>
                 <p>Rent per day:<strong> {rooms.rentperday} </strong></p>
-                <p>Total Amount:<strong>{totalAmount}</strong> </p>
+                <p>Total Amount:<strong> {totalAmount}</strong> </p>
             </div>
             <div>
               <button className="btn btn-primary">Book Now</button>

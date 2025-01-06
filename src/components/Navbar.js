@@ -12,7 +12,11 @@ function Navbar() {
   }
 
   return (
-    <div>
+    <div style={{
+    position: "sticky",
+    top: 0,
+    zIndex: 999
+  }}>
       <nav class='navbar navbar-expand-lg navbar-dark' id='navbar'>
         <div class='container-fluid'>
           <a class='navbar-brand' href='/'>
