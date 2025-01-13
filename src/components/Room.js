@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 
 function Room({ room, fromDate, toDate }) {
-  console.log(toDate, "rooms");
+  // console.log(room, 'room',fromDate, 'fromDate', toDate, "toDate");
   
   const [show, setShow] = useState(false);
 
@@ -38,6 +38,7 @@ function Room({ room, fromDate, toDate }) {
           </p>
           {/* <p>{room.description}</p> */}
           <div className='text-end'>
+            {(fromDate && toDate)  &&(
             <Link
               to={`/book/${room._id}/${fromDate}/${toDate}`}
               style={{pointerEvents: (!fromDate && !toDate) ? 'none': ''}}
@@ -45,6 +46,7 @@ function Room({ room, fromDate, toDate }) {
             >
               <button className='btn btn-primary me-2' > Book Now</button>
             </Link>
+            )}
             <button className='btn btn-dark ' onClick={handleShow}>
               View Details
             </button>
