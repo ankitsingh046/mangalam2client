@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+/*  */
+
+input, select, .ant-picker{
+  box-shadow: none !important;
+  height: 35px;
+}
+
+/*  */
 /* Navbar */
 .navbar {
   background-color: #000 !important;
